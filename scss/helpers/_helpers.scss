@@ -1,0 +1,67 @@
+//----------  helpers
+//------------------------------------------------------------------------------
+%clearfix {
+	&::before, &::after {
+		content: '';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.centered {
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+.show-on-mobile {
+	display: none !important;
+	@include breakpoint(phone) {
+		display: block !important;
+	}
+}
+
+.hidden-on-mobile {
+	display: inline-block !important;
+	@include breakpoint(phone) {
+		display: none !important;
+	}
+}

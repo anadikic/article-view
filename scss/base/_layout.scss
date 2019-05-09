@@ -1,0 +1,43 @@
+//----------  layout
+//------------------------------------------------------------------------------
+html,
+body {
+	@include font-smoothing(antialiased);
+}
+
+body {
+	font-family: $font-regular;
+	font-size: 16px;
+	color: $black;
+}
+
+.container {
+	transition: 0.2s linear;
+	position: relative;
+	padding-left: 10%;
+    padding-right: 10%;
+
+	@media only screen and (max-width: 319px) {
+		min-width: 320px;
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+a {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.desc {
+	color: $grey-dark;
+	font-size: 16px;
+	font-family: $font-medium;
+}

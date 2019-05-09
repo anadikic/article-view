@@ -1,0 +1,25 @@
+//----------  font smoothing
+//------------------------------------------------------------------------------
+@mixin font-smoothing ($val: antialiased) {
+	-webkit-font-smoothing: $val;
+	-moz-font-smoothing: $val;
+	-ms-font-smoothing: $val;
+	-o-font-smoothing: $val;
+}
+
+//----------  Vertical / horizontal alignment
+//------------------------------------------------------------------------------
+@mixin align($position: relative, $direction: x) {
+	position: $position;
+	@if ($direction == 'y') {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if ($direction == 'xy') {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

@@ -1,0 +1,14 @@
+.header {
+	margin-bottom: 20%;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		padding: 7% 5% 0;
+	}
+	a {
+		color: $black;
+	}
+	.logo {
+		font-weight: bold;
+	}
+}
