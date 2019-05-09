@@ -1,4 +1,5 @@
- @-webkit-keyframes slide-top {
+
+@-webkit-keyframes slide-top {
     0% {
       -webkit-transform: translateY(0);
               transform: translateY(0);
@@ -18,6 +19,7 @@
               transform: translateY(-100px);
     }
   }
+
 .title-body {
     margin-bottom: 20%;
     .container {
@@ -26,11 +28,17 @@
             display: block;
         }
     }
-    h1 {
+    h1:first-child {
         max-width: 730px;
-        -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
+        // -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        // animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: all 1.8s cubic-bezier(.645, .045, .355, 1);
+        -o-transition: all 1.8s cubic-bezier(.645, .045, .355, 1);
+        transition: all 1.8s cubic-bezier(.645, .045, .355, 1);
     }
     h1:last-of-type {
         margin-bottom: 40%;
@@ -39,8 +47,7 @@
         max-width: 1200px;
         margin: 0 auto;
         font-size: 30px;
-        animation-name: slide-top;
-        animation-duration: 3s;
+        transform: translateY(0);
     }
     @media only screen and (max-width: 767px) {
         p {
@@ -107,7 +114,6 @@
             background-color: $grey;
             padding: 5%;
             margin-bottom: 20px;
-            width: 90%;
         }
         a {
             font-family: $font-medium;
